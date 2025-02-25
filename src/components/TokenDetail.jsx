@@ -1,3 +1,4 @@
+import { ethers } from 'ethers';
 import React, { useState, useEffect, useRef } from 'react';
 
 const TokenDetail = ({ token, onBack }) => {
@@ -315,30 +316,30 @@ const TokenDetail = ({ token, onBack }) => {
                         </a>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
-                        {transfer.from === ethers.constants.AddressZero ? (
+                        {transfer.transferFrom === ethers.constants.AddressZero ? (
                           <span className="text-green-400">Mint</span>
                         ) : (
                           <a
-                            href={`https://etherscan.io/address/${transfer.from}`}
+                            href={`https://etherscan.io/address/${transfer.transferFrom}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-300 hover:text-white"
                           >
-                            {transfer.from.slice(0, 6)}...{transfer.from.slice(-4)}
+                            {transfer.transferFrom.slice(0, 6)}...{transfer.transferFrom.slice(-4)}
                           </a>
                         )}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
-                        {transfer.to === ethers.constants.AddressZero ? (
+                        {transfer.transferTo === ethers.constants.AddressZero ? (
                           <span className="text-red-400">Burn</span>
                         ) : (
                           <a
-                            href={`https://etherscan.io/address/${transfer.to}`}
+                            href={`https://etherscan.io/address/${transfer.transferTo}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-300 hover:text-white"
                           >
-                            {transfer.to.slice(0, 6)}...{transfer.to.slice(-4)}
+                            {transfer.transferTo.slice(0, 6)}...{transfer.transferTo.slice(-4)}
                           </a>
                         )}
                       </td>
