@@ -1,0 +1,23 @@
+tokentracker.db
+
+# Node
+node_modules
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Build
+.cache
+dist
+build
+coverage
+
+# Logs
+*.log
+*.tmp
+
+# Other
+*.swp
+.vscode
