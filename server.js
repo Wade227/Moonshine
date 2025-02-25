@@ -21,7 +21,7 @@ async function startServer() {
 
     app.locals.db = db; // Make db available to routes
 
-    // await startScanning(provider, db);
+    await startScanning(provider, db);
 
     const PORT = process.env.PORT || 3000;
     const server = http.createServer(app);
