@@ -20,7 +20,7 @@ A real-time dashboard for monitoring ERC-20 token activity on the Ethereum netwo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/eth-token-tracker.git
+   git clone https://github.com/Wade227/Moonshine.git
    cd eth-token-tracker
    ```
 
@@ -30,7 +30,7 @@ A real-time dashboard for monitoring ERC-20 token activity on the Ethereum netwo
    ```
 
 3. Configure your Ethereum provider:
-   Open `app.js` and replace `YOUR_INFURA_KEY` with your Infura project ID or set up another provider.
+   Open `.env` and replace `PROVIDER_URL` with your Infura project ID or set up another provider.
 
 4. Build the frontend:
    ```bash
@@ -49,7 +49,7 @@ A real-time dashboard for monitoring ERC-20 token activity on the Ethereum netwo
 
 The application consists of:
 
-1. **Backend (`app.js`)**:
+1. **Backend**:
    - Express server for API endpoints
    - Ethers.js for interacting with Ethereum
    - SQLite database for storing token and transaction data
